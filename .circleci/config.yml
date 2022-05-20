@@ -12,17 +12,17 @@ jobs:
       - node/install
       - checkout
       - run:
-        name: Install Client-Side Dependency Packages
-        command: npm run client:install
+          name: Install Client-Side Dependency Packages
+          command: npm run client:install
       - run:
-        name: Build Client-Side
-        command: npm run client:build
+          name: Build Client-Side
+          command: npm run client:build
       - run:
-        name: Install Server-Side Dependency Packages
-        command: npm run server:install
+          name: Install Server-Side Dependency Packages
+          command: npm run server:install
       - run:
-        name: Build Server-Side
-        command: npm run server:build
+          name: Build Server-Side
+          command: npm run server:build
 
 workflows:
   build_and_deploy:
