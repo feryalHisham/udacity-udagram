@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "client:install": "cd udagram/udagram-frontend && npm i",
+        "server:install": "cd udagram/udagram-api && npm i",
+        "client:build": "cd udagram/udagram-frontend && npm run build",
+        "server:build": "cd udagram/udagram-api && npm run build",
+        "client:test": "cd udagram/udagram-frontend && npm run test",
+        "server:test": "cd udagram/udagram-api && npm run test"
+    }
+}

@@ -1,0 +1,30 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@4.1.0
+  aws-cli: circleci/aws-cli@1.3.1
+
+jobs:
+  build:
+    docker:
+      - image: "cimg/base:stable"
+    steps:
+      - node/install
+      - checkout
+      - run:
+        name: "Install Client-Side Dependency Packages"
+        command: npm run client:install
+      - run:
+        name: "Build Client-Side"
+        command: npm run client:build
+      - run:
+        name: "Install Server-Side Dependency Packages"
+        command: npm run server:install
+      - run:
+        name: "Build Server-Side"
+        command: npm run server:build
+
+workflows:
+  build_and_deploy:
+    jobs:
+      - build
