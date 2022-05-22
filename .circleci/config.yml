@@ -7,11 +7,11 @@ orbs:
 jobs:
   build:
     docker:
-      - image: "cimg/base:stable"
+      - image: "cimg/base:stable" # docker container where the jobs run
     steps:
       - node/install:
           node-version: "16.13.2"
-      - checkout
+      - checkout # to get the latest code in repo
       - run:
           name: Install Client-Side Dependency Packages
           command: npm run client:install
