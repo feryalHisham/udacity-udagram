@@ -5,7 +5,7 @@ orbs:
   aws-cli: circleci/aws-cli@1.3.1
 
 jobs:
-  build:
+  build_deploy:
     docker:
       - image: "cimg/base:stable" # docker container where the jobs run
     steps:
