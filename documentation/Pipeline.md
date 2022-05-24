@@ -7,7 +7,7 @@ Before running the pipeline we need first to setup the project by linking circle
 The pipeline consists of the following steps:
 
 1. Set up the docker container where the pipeline jobs will run.
-2. Install Nodejs and aws cli.
+2. Install Nodejs, aws cli and eb cli.
 3. Checkout to get the latest code.
 4. Install Client-Side(Frontend) Dependency Packages
 5. Build Client-Side

@@ -1,19 +1,19 @@
 version: 2.1
 
-orbs:
+orbs: # will be used in the job
   node: circleci/node@4.1.0
   aws-cli: circleci/aws-cli@1.3.1
   aws-eb-cli: circleci/aws-elastic-beanstalk@2.0.1
 
 jobs:
-  build_deploy:
+  build_deploy: # job name
     docker:
       - image: "cimg/base:stable" # docker container where the jobs run
     steps:
-      - node/install:
+      - node/install: # install node
           node-version: "16.13.2"
-      - aws-cli/setup
-      - aws-eb-cli/setup
+      - aws-cli/setup # setup aws-cli
+      - aws-eb-cli/setup # setup eb-cli
       - checkout # to get the latest code in repo
       - run:
           name: Install Client-Side Dependency Packages

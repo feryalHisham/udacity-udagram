@@ -62,6 +62,10 @@ The e2e tests are using Protractor and Jasmine.
 - [Node](https://nodejs.org) - Javascript Runtime
 - [Express](https://expressjs.com/) - Javascript API Framework
 
+## CircleCi
+
+[![feryalHisham](https://circleci.com/gh/feryalHisham/udacity-udagram.svg?style=svg)](https://github.com/feryalHisham/udacity-udagram/blob/master/documentation/Pipeline.md)
+
 ## License
 
 [License](LICENSE.txt)
