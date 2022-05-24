@@ -3,6 +3,7 @@ version: 2.1
 orbs:
   node: circleci/node@4.1.0
   aws-cli: circleci/aws-cli@1.3.1
+  aws-eb-cli: circleci/aws-elastic-beanstalk@2.0.1
 
 jobs:
   build_deploy:
@@ -11,6 +12,8 @@ jobs:
     steps:
       - node/install:
           node-version: "16.13.2"
+      - aws-cli/setup
+      - aws-eb-cli/setup
       - checkout # to get the latest code in repo
       - run:
           name: Install Client-Side Dependency Packages
