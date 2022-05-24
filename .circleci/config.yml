@@ -24,8 +24,14 @@ jobs:
       - run:
           name: Build Server-Side
           command: npm run server:build
+      - run:
+          name: Deploy Client-Side Build
+          command: npm run client:deploy
+      - run:
+          name: Deploy Server-Side Build
+          command: npm run server:deploy
 
 workflows:
   build_and_deploy:
     jobs:
-      - build
+      - build_deploy
