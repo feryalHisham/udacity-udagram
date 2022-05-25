@@ -37,4 +37,8 @@ jobs:
 workflows:
   build_and_deploy:
     jobs:
-      - build_deploy
+      - build_deploy:
+          filters:
+            branches:
+              only:
+                - master
